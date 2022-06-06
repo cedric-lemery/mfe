@@ -1,39 +1,31 @@
 version: '3.4'
 
 services:
-
   mfp-container:
-    image: node:18-alpine
+    build: ./packages/container/docker
     ports:
-      - 8080:8080 # this is the port declared in app/webpack.config.js
+      - "8080:8080" # this is the port declared in app/webpack.config.js
     volumes: 
       - ./packages/container:/usr/src/app
-    working_dir: /usr/src/app
     stdin_open: true
-
   mfp-auth:
-    image: node:18-alpine
+    build: ./packages/auth/docker
     ports:
-      - 8081:8081 # this is the port declared in app/webpack.config.js
+      - "8082:8082" # this is the port declared in app/webpack.config.js
     volumes: 
       - ./packages/auth:/usr/src/app
-    working_dir: /usr/src/app
     stdin_open: true
-
   mfp-marketing:
-    image: node:18-alpine
+    build: ./packages/marketing/docker
     ports:
-      - 8082:8082 # this is the port declared in app/webpack.config.js
+      - "8081:8081" # this is the port declared in packages/marketing/config/webpack.dev.js
     volumes: 
       - ./packages/marketing:/usr/src/app
-    working_dir: /usr/src/app
     stdin_open: true
-
   mfp-dashboard:
     build: ./packages/dashboard/docker
     ports:
-      - 8083:8083 # this is the port declared in app/webpack.config.js
+      - "8083:8083" # this is the port declared in app/webpack.config.js
     volumes: 
       - ./packages/dashboard:/usr/src/app
-    working_dir: /usr/src/app
     stdin_open: true

@@ -15,7 +15,7 @@ the docker-compose file in packages provide a full architecture in docker node c
 `docker-compose run --rm mfp-container npm install`
 
 # Run the server 
-`docker-compose exec products-microfront-pwa npm run start`
+`docker-compose exec mfp-marketing npm run start`
 
 # Stop the dockers 
 `docker-compose down`
