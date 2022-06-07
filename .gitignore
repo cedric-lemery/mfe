@@ -4,14 +4,8 @@
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
 # Node artifact files
-packages/container/node_modules/
-packages/container/dist/
-packages/auth/node_modules/
-packages/auth/dist/
-packages/marketing/node_modules/
-packages/marketing/dist/
-packages/dashboard/node_modules/
-packages/dashboard/dist/
+node_modules
+dist
 
 # Compiled Java class files
 *.class
