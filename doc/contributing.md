@@ -16,6 +16,7 @@ the docker-compose file in packages provide a full architecture in docker node c
 
 # Run the server 
 `docker-compose exec mfp-marketing npm run start`
+`docker-compose exec mfp-container npm run start`
 
 # Stop the dockers 
 `docker-compose down`
