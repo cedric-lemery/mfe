@@ -17,6 +17,7 @@ the docker-compose file in packages provide a full architecture in docker node c
 `docker-compose up -d`
 ### Run the server 
 `docker-compose exec mfp-marketing npm run start`
+`docker-compose exec mfp-auth npm run start`
 `docker-compose exec mfp-container npm run start`
 
 ### Testing build 
